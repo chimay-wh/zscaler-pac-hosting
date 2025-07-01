@@ -3,8 +3,8 @@ function FindProxyForURL(url, host) {
   var hour = now.getHours();
   var minute = now.getMinutes();
 
-  if (dnsDomainIs(host, "chimay-wh.hatenablog.com")) {
-    if (hour === 15 && minute >= 10 && minute < 13) {
+  if (dnsDomainIs(host, "*.hatenablog.*")) {
+    if (hour === 15 && minute >= 45 && minute < 50) {
       return "DIRECT"; // 指定時間だけバイパス
     }
     return "PROXY ${ZAPP_TUNNEL2}";
