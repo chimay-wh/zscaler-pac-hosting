@@ -3,8 +3,8 @@ function FindProxyForURL(url, host) {
   var hour = now.getHours();
   var minute = now.getMinutes();
 
-  if (dnsDomainIs(host, "my-cloudflare-pages-o2p.pages.dev")) {
-    if (hour === 14 && minute >= 15 && minute < 45) {
+  if (dnsDomainIs(host, "chimay-wh.hatenablog.com")) {
+    if (hour === 14 && minute >= 50 && minute < 55) {
       return "DIRECT"; // 指定時間だけバイパス
     }
     return "PROXY ${ZAPP_TUNNEL2}";
